@@ -1,6 +1,6 @@
 from django.urls import path
-from . import views
+from .views import AsyncCallView
 
 urlpatterns = [
-    path('async/', views.http_call_async, name='async_call'),
+    path('async/', AsyncCallView.as_view(), name='async_view'),
 ]
